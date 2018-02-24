@@ -1,7 +1,7 @@
 import io
 from PIL import Image
-
 from faceapp.faceapp import FaceApp
+
 
 Fa = FaceApp()
 filters = ['smile', 'smile_2', 'hot', 'old', 'young', 'female', 'male']
@@ -14,3 +14,4 @@ for f in range(len(filters)):
     image = Image.open(io.BytesIO(b))
     image.save('./img/'+str(filters[n])+'.png')
     n = n + 1
+
